@@ -64,6 +64,54 @@
       padding: 20px;
       border-radius: 5px;
     }
+    /* Pricing card hover effect */
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .pricing-card {
+      background-color: #f2f6fb;
+      border-left: 5px solid #0b2c4d;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    /* Testimonial & blog cards */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .card-container .card {
+      background-color: #f2f6fb;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+    }
+    /* Form styling */
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    form button {
+      background-color: #0b2c4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -76,6 +124,7 @@
 <nav>
   <a href="#about">About</a>
   <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
   <a href="#how">How It Works</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -95,7 +144,6 @@
 
 <section id="services">
   <h2>Our Services</h2>
-
   <h3>1. Research Proposal Support</h3>
   <ul>
     <li>Full proposal development (Chapter 1–3)</li>
@@ -151,46 +199,36 @@
 
 <section id="pricing">
   <h2>Our Packages & Pricing</h2>
-  <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;">
-
-    <!-- Basic Guidance Card -->
-    <div style="background-color:#f2f6fb; border-left:5px solid #0b2c4d; padding:20px; border-radius:10px; width:250px; text-align:center;">
+  <div class="pricing-cards">
+    <div class="pricing-card">
       <h3>Basic Guidance</h3>
       <p>Step-by-step guidance on proposal chapters or assignments</p>
       <strong>K150–250</strong>
     </div>
-
-    <!-- Full Proposal Card -->
-    <div style="background-color:#f2f6fb; border-left:5px solid #0b2c4d; padding:20px; border-radius:10px; width:250px; text-align:center;">
+    <div class="pricing-card">
       <h3>Full Proposal</h3>
       <p>Complete proposal development (Chapter 1–3)</p>
       <strong>K500</strong>
     </div>
-
-    <!-- Editing & Referencing Card -->
-    <div style="background-color:#f2f6fb; border-left:5px solid #0b2c4d; padding:20px; border-radius:10px; width:250px; text-align:center;">
+    <div class="pricing-card">
       <h3>Editing & Referencing</h3>
       <p>Editing, formatting, referencing, and plagiarism review</p>
       <strong>K200</strong>
     </div>
-
-    <!-- One-on-One Consultation Card -->
-    <div style="background-color:#f2f6fb; border-left:5px solid #0b2c4d; padding:20px; border-radius:10px; width:250px; text-align:center;">
+    <div class="pricing-card">
       <h3>Consultation</h3>
       <p>Personalized academic consultation, topic selection</p>
       <strong>K50/hour</strong>
     </div>
-
-    <!-- Data & Analysis Support Card -->
-    <div style="background-color:#f2f6fb; border-left:5px solid #0b2c4d; padding:20px; border-radius:10px; width:250px; text-align:center;">
+    <div class="pricing-card">
       <h3>Data & Analysis</h3>
       <p>Questionnaire design, variable identification, basic analysis</p>
       <strong>K100</strong>
     </div>
-    
   </div>
 </section>
-  <section id="how">
+
+<section id="how">
   <h2>How It Works</h2>
   <div class="highlight">
     <ol>
@@ -205,48 +243,56 @@
 <section id="contact">
   <h2>Contact & Service Requests</h2>
   <div class="contact-box">
-    <p><strong>Email (Primary):</strong> kemmykasimbojr@gmail.com</p>
-    <p><strong>WhatsApp:</strong> +260976844498</p>
-    <form action="https://formspree.io/f/xdalkqyr" method="POST">
-  <label for="name">Full Name:</label><br>
-  <input type="text" id="name" name="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-
-  <label for="email">Email Address:</label><br>
-  <input type="email" id="email" name="_replyto" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-
-  <label for="whatsapp">WhatsApp Number:</label><br>
-  <input type="text" id="whatsapp" name="whatsapp" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-
-  <label for="institution">Institution / College:</label><br>
-  <input type="text" id="institution" name="institution" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-
-  <label for="course">Course / Program:</label><br>
-  <input type="text" id="course" name="course" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-
-  <label for="service">Type of Service Needed:</label><br>
-  <select id="service" name="service" required style="width:100%;padding:8px;margin-bottom:10px;">
-    <option value="">--Select--</option>
-    <option value="Proposal Writing">Proposal Writing</option>
-    <option value="Guided Proposal">Guided Proposal</option>
-    <option value="Assignments">Assignments & Coursework</option>
-    <option value="Referencing & Editing">Referencing & Editing</option>
-    <option value="Data Support">Research Instruments & Data Support</option>
-    <option value="Consultation">Academic Consultation</option>
-  </select><br>
-
-  <label for="deadline">Deadline:</label><br>
-  <input type="date" id="deadline" name="deadline" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
-
-  <label for="notes">Additional Notes / Requirements:</label><br>
-  <textarea id="notes" name="notes" rows="4" style="width:100%;padding:8px;margin-bottom:10px;"></textarea><br>
-
-  <button type="submit" style="background-color:#0b2c4d;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Submit Request</button>
-    </form>
+    <p><strong>Email (Primary):</strong> proguideresearchhub@gmail.com</p>
+    <p><strong>WhatsApp:</strong> +260XXXXXXXXX</p>
     <p>
       For faster service, please include your institution, course, deadline,
       and type of support required.
     </p>
   </div>
+
+  <!-- Form confirmation message -->
+  <div id="form-message" style="display:none; color:green; font-weight:bold; margin-bottom:10px;">
+    Thank you! Your request has been sent. We will contact you shortly.
+  </div>
+
+  <!-- Service Request Form -->
+  <h3>Submit a Service Request</h3>
+  <form action="https://formspree.io/f/xdalkqyr" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="whatsapp">WhatsApp Number:</label>
+    <input type="text" id="whatsapp" name="whatsapp" required>
+
+    <label for="institution">Institution / College:</label>
+    <input type="text" id="institution" name="institution" required>
+
+    <label for="course">Course / Program:</label>
+    <input type="text" id="course" name="course" required>
+
+    <label for="service">Type of Service Needed:</label>
+    <select id="service" name="service" required>
+      <option value="">--Select--</option>
+      <option value="Proposal Writing">Proposal Writing</option>
+      <option value="Guided Proposal">Guided Proposal</option>
+      <option value="Assignments">Assignments & Coursework</option>
+      <option value="Referencing & Editing">Referencing & Editing</option>
+      <option value="Data Support">Research Instruments & Data Support</option>
+      <option value="Consultation">Academic Consultation</option>
+    </select>
+
+    <label for="deadline">Deadline:</label>
+    <input type="date" id="deadline" name="deadline" required>
+
+    <label for="notes">Additional Notes / Requirements:</label>
+    <textarea id="notes" name="notes" rows="4"></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
 
   <h3>Academic Integrity Notice</h3>
   <p>
@@ -256,9 +302,75 @@
   </p>
 </section>
 
+<section id="testimonials">
+  <h2>What Students Say</h2>
+  <div class="card-container">
+    <div class="card">
+      <p>"ProGuide helped me structure my proposal perfectly! Highly recommended."</p>
+      <strong>- Alice, University of Zambia</strong>
+    </div>
+    <div class="card">
+      <p>"I got step-by-step guidance for my thesis and it made everything so clear."</p>
+      <strong>- Brian, Evelyn Hone College</strong>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div style="max-width:900px; margin:auto;">
+    <h3>Do you write proposals for students?</h3>
+    <p>We provide guidance, editing, and structuring. Students remain responsible for final submission.</p>
+
+    <h3>How do I submit a request?</h3>
+    <p>Use the contact form above or reach us via email/WhatsApp with your details.</p>
+
+    <h3>What is the usual turnaround time?</h3>
+    <p>It depends on the service requested. After submission, we provide an estimated timeline via email.</p>
+  </div>
+</section>
+
+<section id="blog">
+  <h2>Academic Tips & Articles</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>5 Tips for Writing a Strong Proposal</h3>
+      <p>Learn how to structure your research proposal to impress your supervisor.</p>
+    </div>
+    <div class="card">
+      <h3>Common Referencing Mistakes</h3>
+      <p>Discover how to properly cite sources in APA, Harvard, and Vancouver styles.</p>
+    </div>
+  </div>
+</section>
+
 <footer>
   <p>&copy; 2026 ProGuide Research Hub Zambia | Academic Writing & Research Support</p>
 </footer>
 
+<script>
+  // Form confirmation script
+  const form = document.querySelector("form");
+  const message = document.getElementById("form-message");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(() => {
+      message.style.display = "block";
+      form.reset();
+    })
+    .catch(() => {
+      message.style.display = "block";
+      message.style.color = "red";
+      message.textContent = "Oops! There was a problem. Try again.";
+    });
+  });
+</script>
+
 </body>
-  </html>
+    </html>
